@@ -1,0 +1,49 @@
+package hub_npc
+
+def tester(){
+    aligned{
+        positioned(~ ~2.5 ~){
+            armor_stand.floatingtext("Tester")
+        }
+    }
+}
+def translator(){
+    aligned{
+        positioned(~ ~2.5 ~){
+            armor_stand.floatingtext("Translator")
+        }
+    }
+}
+def translatorAndtester(){
+    aligned{
+        positioned(~ ~2.5 ~){
+            armor_stand.floatingtext("Translator & Tester")
+        }
+    }
+}
+
+def mapmaker(){
+    aligned{
+        positioned(~ ~2.5 ~){
+            armor_stand.floatingtext("Map Maker")
+        }
+    }
+}
+def artist(){
+    aligned{
+        positioned(~ ~2.5 ~){
+            armor_stand.floatingtext("3D Models")
+        }
+    }
+}
+
+forgenerate($i,(Spooky_NG,P_king,Aandeel,Liontack,DoubleF3lix,KitzonMC,MSHuman,SCool62,TheBelal,TheblueMan003,Benjamin874,LeoBlock95,Beiyao520,HeimNad,ItsPigeonaua)){
+    def summon_$i(){
+        armor_stand.newmodel(stick, $eval($i.index+1),{Tags:["hub.staff"]}){
+            aligned{
+                /tp @s ~ ~ ~ ~ ~
+            }
+            entity.setname("$i")
+        } 
+    }
+}

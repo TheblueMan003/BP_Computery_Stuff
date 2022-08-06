@@ -1,0 +1,3 @@
+package dialog
+
+dialog.dialogSystemAutoWithAnimationTranslated(40,"dialog_en.csv","dialog_nt.csv","dialog_fr.csv","dialog_ger.csv","dialog_it.csv","dialog_rus.csv","dialog_ch_sim")

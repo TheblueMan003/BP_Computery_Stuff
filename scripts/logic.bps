@@ -1,0 +1,198 @@
+package logic
+blocktags off{
+    brown_terracotta,
+    purple_terracotta,
+    cyan_terracotta,
+    blue_terracotta,
+    pink_wool,
+    
+    orange_terracotta,
+    magenta_terracotta,
+    light_blue_terracotta,
+    green_terracotta,
+    white_wool,
+    black_terracotta,
+    yellow_terracotta,
+    gold_block,
+    stone,
+    dead_tube_coral_block,
+    dead_brain_coral_block,
+    gray_wool
+}
+blocktags on{
+    brown_terracotta,
+    purple_terracotta,
+    cyan_terracotta,
+    blue_terracotta,
+    pink_wool,
+    
+    lime_terracotta,
+    pink_terracotta,
+    gray_terracotta,
+    red_terracotta,
+    orange_wool,
+    magenta_wool,
+    light_gray_terracotta,
+    redstone_block,
+    dead_tube_coral_block,
+    dead_brain_coral_block,
+    light_gray_wool
+}
+blocktags gates{
+    brown_terracotta,
+    purple_terracotta,
+    cyan_terracotta,
+    blue_terracotta,
+    pink_wool,
+    dead_tube_coral_block,
+    dead_brain_coral_block
+}
+blocktags cable{
+    blue_wool,
+    brown_wool,
+    cyan_wool,
+    black_wool
+}
+blocktags constant{
+    light_gray_wool,
+    gray_wool
+}
+blocktags clock{
+    lime_wool,
+    green_wool
+}
+
+int @test tagwork(){
+    int res = 0
+    if (!res){
+        if (block(#on)){
+            res=1
+        }
+        if (block(#off)){
+            res=1
+        }
+        if (block(#gates)){
+            res=1
+        }
+        if (block(#clock)){
+            res=1
+        }
+        res = 1
+    }
+    return res
+}
+int @test clockwork(){
+    return clock_tick.enabled
+}
+int @test toolsDisabled(){
+    return 1 - clock_spawn.enabled
+}
+class flipflop_saver{
+    int dir
+    def __init__(int d){
+        dir = d
+    }
+    def save(){
+        if (dir == 1){
+            if (block(~-1 ~ ~ #on)){
+                setblock(~ ~-1 ~ lime_terracotta)
+            }
+            if (block(~-1 ~ ~ #off)){
+                setblock(~ ~-1 ~ orange_terracotta)
+            }
+        }
+        if (dir == -1){
+            if (block(~1 ~ ~ #on)){
+                setblock(~ ~-1 ~ lime_terracotta)
+            }
+            if (block(~1 ~ ~ #off)){
+                setblock(~ ~-1 ~ orange_terracotta)
+            }
+        }
+        kill()
+    }
+}
+class clock{
+    def __init__(){
+        
+    }
+}
+process clock_tick{
+    int time
+    def main(){
+        time ++
+        if (time == 20){
+            with(clock,true){
+                setblock(lime_wool)
+                positioned(~ ~ ~-1){power_on();cross_power_on_vertical()}
+            }
+            with(flipflop_saver,true){
+                save()
+            }
+        }
+        if (time == 40){
+            time = 0
+            with(clock,true){
+                setblock(green_wool)
+                positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+            }
+            with(flipflop_saver,true){
+                save()
+            }
+        }
+    }
+}
+process clock_spawn{
+    def main(){
+        with(@a,true){
+            positioned(~ ~-1 ~){
+                aligned{
+                    if (block(~ ~ ~ #clock)){
+                        bool hasClock=false
+                        with(clock[distance=..1]){
+                            hasClock = true
+                        }
+                        if (!hasClock){
+                            print("Added Clock!")
+                            new clock()
+                        }
+                    }
+                    if (block(purple_wool)){
+                        new flipflop_saver(1)
+                        with(flipflop_saver,true){
+                            save()
+                        }
+                    }
+                    if (block(red_wool)){
+                        new flipflop_saver(-1)
+                        with(flipflop_saver,true){
+                            save()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+clock_tick.start()
+def flip(){
+    if (block(light_blue_wool)){
+        setblock(yellow_wool)
+        positioned(~ ~ ~-1){power_on();cross_power_on_vertical()}
+    }
+    else if (block(yellow_wool)){
+        setblock(light_blue_wool)
+        positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+    }
+    if (block(green_wool)){
+        setblock(lime_wool)
+        positioned(~ ~ ~-1){power_on();cross_power_on_vertical()}
+    }
+    else if (block(lime_wool)){
+        setblock(green_wool)
+        positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+    }
+    with(flipflop_saver,true){
+        save()
+    }
+}

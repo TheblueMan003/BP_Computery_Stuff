@@ -1,0 +1,79 @@
+package game
+
+def resetKernel(){
+    state = 0
+    GameID = gameID
+}
+
+[inplace]
+lazy summonKernel(int $index, int $count, void=>void $callback){
+    npc kernel = npc(diamond)
+
+    kernel.setanimation{
+        state := 0
+        GameID := gameID
+        animation.lookat(@p)
+        @s.rot_y = 0
+        kernel.update()
+        kernel.disableOptimization()
+        if (state == 0){
+            if(@p[distance=..9]){
+                tag(cpsr.kernelTalk)
+                state = 1
+                with(@a,true){
+                    dialog.show($index, $count, pass){
+                        with(@e[tag=cpsr.kernelTalk]){
+                            kernel.setanimations(animationset.idle())
+                            $callback()
+                        }
+                    }
+                }
+            }
+        }
+        if (GameID != gameID){
+            resetKernel()
+            kernel.setanimations(animationset.idle())
+        }
+    }
+}
+def kernel_level_1(){
+    summonKernel(intro_0,7,pass)
+}
+def kernel_level_2(){
+    summonKernel(level_2_1,2,pass)
+}
+def kernel_level_3(){
+    summonKernel(level_3_1,2,pass)
+}
+def kernel_level_4(){
+    summonKernel(level_4_1,2,pass)
+}
+def kernel_level_6(){
+    summonKernel(level_6_1,2,pass)
+}
+def kernel_level_8(){
+    summonKernel(level_8_1,3,pass)
+}
+def kernel_level_10(){
+    summonKernel(level_10_1,6,pass)
+}
+def kernel_level_40(){
+    summonKernel(level_40_1,5,pass)
+}
+def kernel_level_50(){
+    summonKernel(level_50_1,2){
+        with(@a,true){
+            /execute in minecraft:overworld run tp @s 3.62 64.00 43.53 -180.40 0.78
+            screen.addcontroll()
+            gamemode(adventure)
+            untag(inGame)
+            at(@s){
+                screen.showendscreen()
+            }
+            music.stop()
+        }
+    }
+}
+def kernel_level_clock(){
+    summonKernel(clock_0,2,pass)
+}

@@ -1,0 +1,84 @@
+package game
+
+process game{
+    def main(){
+        with(@a,true){
+            raycast.shoot(10,0.1,block(minecraft:stone_button[powered=true])){
+                if (block(minecraft:stone_button[powered=true])){
+                    setblock(minecraft:stone_button[face=floor,facing=south,powered=false])
+                    positioned(~ ~-1 ~){
+                        logic.flip()
+                    }
+                }
+            }
+        }
+    }
+}
+INT state
+INT step
+INT GameID
+int gameID
+int level := 1
+
+def summondoor(){
+    /kill @e[type=armor_stand,distance=..1]
+    entity.summon(marker, {Tags:["cpsr.door"]}){
+        resetDoor()
+    }
+}
+def killdoor(){
+    with(@e[tag=cpsr.door,distance=..2],true){
+        /fill ~-1 ~ ~ ~2 ~3 ~ air replace iron_block
+        kill()
+    }
+}
+def resetAllDoor(){
+    gameID++
+    level = 1
+}
+def resetDoor(){
+    GameID = gameID
+    step = 0
+    state = 0
+    /fill ~-1 ~ ~ ~2 ~3 ~ iron_block replace air
+}
+def ticking main(){
+    with(@e[tag=cpsr.door],true){
+        if (gameID != GameID){
+            resetDoor()
+        }
+        gameID := -1
+        state := 0
+        if (state == 0 && block(~ ~ ~7 redstone_lamp[lit=true])){
+            state = 1
+            level++
+            with(@a[tag=inGame],true){
+                title(@s, title, "\uE200")
+                sound.play(minecraft:entity.player.levelup)
+                if (level % 10 == 0){
+                    music.next()
+                }
+            }
+        }
+        if (state == 1){
+            step++
+            if (step == 10){
+                /fill ~-1 ~ ~ ~2 ~ ~ air replace iron_block
+                sound.playallat(minecraft:block.piston.contract)
+            }
+            if (step == 20){
+                /fill ~-1 ~1 ~ ~2 ~1 ~ air replace iron_block
+                sound.playallat(minecraft:block.piston.contract)
+            }
+            if (step == 30){
+                /fill ~-1 ~2 ~ ~2 ~2 ~ air replace iron_block
+                sound.playallat(minecraft:block.piston.contract)
+            }
+            if (step == 40){
+                /fill ~-1 ~3 ~ ~2 ~3 ~ air replace iron_block
+                sound.playallat(minecraft:block.piston.contract)
+                state = 2
+            }
+        }
+    }
+}

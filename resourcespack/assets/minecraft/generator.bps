@@ -1,0 +1,9 @@
+dialog.addallsound()
+
+sounds.music("music/puzzle_game_2")
+sounds.music("music/puzzle_game_3")
+sounds.music("music/puzzle_1_a")
+sounds.music("music/puzzle_1_b")
+sounds.music("music/tension")
+
+sounds.generate()

@@ -1,0 +1,2 @@
+font.addchar("title", "custom/ui_level_completed.png",64,"\uE200")
+font.generate()

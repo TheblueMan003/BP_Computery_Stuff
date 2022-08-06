@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("Welcome to Solar Tech Corp!",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Last week, we were attacked by ghosts, ",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("so we decided to improve our security system.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("To do that, we want to use a new technology of ours called Bluestone.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("We need you to help us test its capabilities.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Bluestone works like Redstone, but with an unlimited distance.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("Your goal is to power the Bluestone lamp.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("This is an AND-Gate.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("It outputs ON when its left AND right side are ON.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("This is a NOT-Gate.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("It inverses the power it receives.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("This is an OR-Gate.",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("It outputs ON when its left OR right side is ON.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("This is an XOR-Gate.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("It outputs ON when it receives only one ON signal.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("This is a Multiplexer. ",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("If the underside is OFF, it will copy and output the LEFT signal.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("If the underside is ON, it will copy and output the RIGHT signal.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("This is a D-Flip-Flop.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("It's one of the most complex gates, so listen closely.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("You see the little arrow on it?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("When the side with the arrow switches from OFF to ON,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("It will copy and output the signal from the other side.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("The output will not change until the side with the arrow switches from OFF to ON.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("This is a D-Latch.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("You see the little E on it?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("When the side with the E is ON,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("it will copy and output the signal of the other side.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("The output will remain the same if the E side is OFF.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("Congratulations, you completed all the tests!",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("Goodbye!",light_purple))
+
+cable;null;(());((""),("This is a Cable.",light_purple))
+button;null;(());((""),("This is a Button. You can press it.",light_purple))
+constant;null;(());((""),("This is a Constant. Its output does not change.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("This is a clock. ",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("Its output changes every second.",light_purple))
+nothing;null;(());((""),("Look at a Bluestone component for more information.",light_purple))
+
+language_set;null;(());((""),("Language set to English.",white))
+no_reset;null;(());((""),("This map does not have a reset system. If you wish to play again, please reinstall the map.",red))

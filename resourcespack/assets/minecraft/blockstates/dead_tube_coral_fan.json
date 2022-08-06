@@ -1,0 +1,69 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:custom/fissure"
+      },
+      {
+        "model": "minecraft:custom/fissure",
+        "y": 90
+      },
+      {
+        "model": "minecraft:custom/fissure",
+        "y": 180
+      },
+      {
+        "model": "minecraft:custom/fissure",
+        "y": 270
+      },
+	  
+	  {
+        "model": "minecraft:custom/fissure2"
+      },
+      {
+        "model": "minecraft:custom/fissure2",
+        "y": 90
+      },
+      {
+        "model": "minecraft:custom/fissure2",
+        "y": 180
+      },
+      {
+        "model": "minecraft:custom/fissure2",
+        "y": 270
+      },
+	  
+	  {
+        "model": "minecraft:custom/fissure3"
+      },
+      {
+        "model": "minecraft:custom/fissure3",
+        "y": 90
+      },
+      {
+        "model": "minecraft:custom/fissure3",
+        "y": 180
+      },
+      {
+        "model": "minecraft:custom/fissure3",
+        "y": 270
+      },
+	  
+	  {
+        "model": "minecraft:custom/fissure4"
+      },
+      {
+        "model": "minecraft:custom/fissure4",
+        "y": 90
+      },
+      {
+        "model": "minecraft:custom/fissure4",
+        "y": 180
+      },
+      {
+        "model": "minecraft:custom/fissure4",
+        "y": 270
+      }
+    ]
+  }
+}

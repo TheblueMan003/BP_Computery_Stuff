@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("Добро пожаловать в Солнечную Технологическую Корпорацию!",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("На прошлой неделе на нас напали призраки.",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("Поэтому мы решили усовершенствовать нашу систему безопасности.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Для этого мы хотим использовать нашу новую технологию, называемой Синим Камнем.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("Нам нужно, чтобы ты помог нам проверить её возможности.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Синий Камень работает так же, как Красный Камень, но без ограниченного расстояния.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("Твоя цель - зажечь лампу из Синего Камня.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("Это И-Врата.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("Они проводят сигнал, когда их левые И правые стороны ВКЛ.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("Это НЕ-Врата.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("Они изменяют получаемый сигнал.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("Это ИЛИ-Врата",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("Они проводят сигнал, когда ВКЛ. их левые ИЛИ правые стороны.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("Это Эксклюзивный-Врата.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("Они проводят сигнал, когда получают только один сигнал.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("Это Мультиплексор.",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("Если нижняя сторона ВЫКЛ., он скопирует и выведет ЛЕВЫЙ сигнал.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("Если нижняя сторона ВКЛ., он скопирует и выведет ПРАВЫЙ сигнал.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("Это Д-Триггер.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("Это одни из самых сложных врат, так что слушай внимательно.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Ты видишь маленькую стрелочку на нём?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("Когда сторона со стрелочкой переходит от ВЫКЛ. к ВКЛ.,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Он скопирует и выведет сигнал другой стороны.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("Выходные данные не изменятся до тех пор, пока сторона со стрелкой не перейдёт из положения ВЫКЛ. во ВКЛ.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("Это Д-Защёлка.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Ты видишь на ней маленькую букву \"Е\"?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("Когда сторона с буквой \"Е\" ВКЛ.,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Она скопирует и выведет сигнал другой стороны.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("Выходной сигнал останется прежним, если сторона \"E\" ВЫКЛ.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("Поздравляем, ты прошёл все тесты!",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("Прощай!",light_purple))
+
+cable;null;(());((""),("Это Кабель.",light_purple))
+button;null;(());((""),("Это Кнопка. Ты можешь нажать на неё.",light_purple))
+constant;null;(());((""),("Это Константа. Её выходные данные не меняются.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("Это Часы.",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("Их выходные данные меняются каждую секунду.",light_purple))
+nothing;null;(());((""),("Посмотри на компонент из Синего Камня для получения дополнительной информации.",light_purple))
+
+language_set;null;(());((""),("Установлен русский язык.",white))
+no_reset;null;(());((""),("Эта карта не имеет системы рестарта. Если ты хочешь сыграть ещё раз, пожалуйста, переустанови карту.",red))

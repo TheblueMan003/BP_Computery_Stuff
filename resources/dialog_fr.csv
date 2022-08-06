@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("Bienvenue chez Solar Tech Corp !",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("La semaine dernière, nous avons été attaqués par des fantômes.",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("Nous avons donc décidé d'améliorer notre système de sécurité.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Pour ce faire, nous souhaitons utiliser une de nos nouvelles technologies, appelée Bluestone.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("Nous avons besoin de vous pour nous aider à tester ses capacités.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("La Bluestone fonctionne comme la Redstone, mais sans limite de distance.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("Votre objectif est d'allumer la lampe de Bluestone.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("Ceci est une porte ET.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("Elle émet un signal lorsque ses côtés gauche ET droit sont actifs.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("Ceci est une porte NON.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("Elle inverse le signal qu'elle reçoit.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("Ceci est une porte OU.",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("Elle émet un signal lorsque son côté gauche OU droit est actif.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("Ceci est une porte OU Exclusif.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("Elle émet un signal lorsqu'elle ne reçoit qu'un seul signal actif.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("Ceci est un multiplexeur.",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("Si le côté inférieur est éteint, il copiera et émettra le signal de GAUCHE.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("Si le côté inférieur est activé, il copiera et émettra le signal de DROIT.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("Ceci est une D-Flip-Flop.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("C'est l'une des portes les plus complexes, alors écoutez bien.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Vous voyez la petite flèche dessus ?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("Lorsque le côté avec la flèche passe de OFF à ON,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Elle copiera et donnera le signal de l'autre côté.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("La sortie ne changera pas tant que le côté avec la flèche ne passera pas de OFF à ON.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("Ceci est une D-Latch.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Vous voyez le petit E dessus ?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("Lorsque le côté avec le E est allumé,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Elle copiera et sortira le signal de l'autre côté.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("La sortie restera la même si le côté E est désactivé.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("Félicitations, vous avez réussi tous les tests !",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("Au revoir!",light_purple))
+
+cable;null;(());((""),("Ceci est un câble.",light_purple))
+button;null;(());((""),("Ceci est un bouton. Vous pouvez appuyer dessus.",light_purple))
+constant;null;(());((""),("C'est une Constante. Sa sortie ne change pas.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("Ceci est une horloge.",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("Sa sortie change toutes les secondes.",light_purple))
+nothing;null;(());((""),("Regardez un composant de Bluestone pour plus d'informations.",light_purple))
+
+language_set;null;(());((""),("Language set to French.",white))
+no_reset;null;(());((""),("Cette map n'a pas de système de réinitialisation. Si vous souhaitez rejouer, veuillez réinstaller la map.",red))

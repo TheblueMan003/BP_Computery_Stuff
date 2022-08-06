@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("Benvenuto in Solar Tech Corp!",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("La scorsa settimana siamo stati attaccati da dei fantasmi.",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("Quindi abbiamo deciso di migliorare il nostro sistema di sicurezza.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Per farlo, vogliamo usare una nostra nuova tecnologia, chiamata Bluestone.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("Abbiamo bisogno del tuo aiuto per testare le sue capacità.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("La Bluestone funziona come la Redstone, ma senza limiti di distanza.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("Il tuo obbiettivo è quello di illuminare la lampada di Bluestone.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("Questo è un AND-Gate.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("L'output è ON quando sia la sinistra che la destra sono ON.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("Questo è un NOT-Gate.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("Inverte la corrente che riceve.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("Questo è un OR-Gate.",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("L'output è ON quando a sinistra O a destra è ON.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("Questo è un XOR-Gate.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("L'output è ON quando riceve solo un segnale ON.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("Questo è un Multiplexer.",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("Se sotto è OFF, copierà ed emetterà il segnale di SINISTRA.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("Se sotto è ON, copierà ed emetterà il segnale di DESTRA.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("Questo è un D-Flip-Flop.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("E' uno dei più complessi, quindi ascolta attentamente.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Vedi quella piccola freccia?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("Quando il lato con la freccia passa da OFF a ON,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Copierà ed emetterà il segnale dell'altro lato.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("L'output non cambierà finchè il lato con la freccia non passa da OFF a ON.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("Questo è un D-Latch.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Vedi quella piccola E?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("Quando il lato con la E è ON,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Copierà ed emetterà il segnale dell'altro lato.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("L'output rimarrà lo stesso se il lato con la E è OFF.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("Congratulazioni, hai completato tutti i test!",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("Arrivederci!",light_purple))
+
+cable;null;(());((""),("Questo è un cavo.",light_purple))
+button;null;(());((""),("Questo è un bottone. Puoi cliccarlo.",light_purple))
+constant;null;(());((""),("Questa è una costante. Il suo output non cambia.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("Questo è un clock.",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("Il suo output cambia ogni secondo.",light_purple))
+nothing;null;(());((""),("Guarda una componente di Bluestone per più informazioni.",light_purple))
+
+language_set;null;(());((""),("Lingua impostata su Italiano.",white))
+no_reset;null;(());((""),("Questa mappa non ha un sistema di reset. Se desideri giocare di nuovo, perfavore reinstalla la mappa.",red))

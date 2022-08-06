@@ -1,0 +1,124 @@
+package logic
+
+package logic
+
+def cross_power_off_vertical(){
+    if (block(~ ~ ~ blue_wool)){setblock(cyan_wool);positioned(~ ~ ~-1){power_off()};positioned(~ ~ ~1){power_off()}}
+    if (block(~ ~ ~ black_wool)){setblock(brown_wool);positioned(~ ~ ~-1){power_off()};positioned(~ ~ ~1){power_off()}}
+    
+}
+def cross_power_off_horizontal(){
+    if (block(~ ~ ~ brown_wool)){setblock(cyan_wool);positioned(~-1 ~ ~){power_off()};positioned(~1 ~ ~){power_off()}}
+    if (block(~ ~ ~ black_wool)){setblock(blue_wool);positioned(~-1 ~ ~){power_off()};positioned(~1 ~ ~){power_off()}}
+}
+def power_off(){
+    if (block(~ ~ ~ #on)){
+        if (block(~ ~ ~ redstone_block)){
+            setblock(~ ~ ~ gold_block)
+            setblock(~ ~1 ~ minecraft:redstone_lamp[lit=false])
+        }
+        // Cable Vert
+        if (block(~ ~ ~ lime_terracotta)){
+            setblock(~ ~ ~ orange_terracotta)
+            positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+            positioned(~ ~ ~1){if (!block(#gates)){power_off();cross_power_off_vertical()}}
+        }
+        // Cable Horiz
+        if (block(~ ~ ~ red_terracotta)){
+            setblock(~ ~ ~ green_terracotta)
+            positioned(~-1 ~ ~){power_off();cross_power_off_horizontal()}
+            positioned(~1 ~ ~){power_off();cross_power_off_horizontal()}
+        }
+        // Turn Up-Right
+        if (block(~ ~ ~ pink_terracotta)){
+            setblock(~ ~ ~ magenta_terracotta)
+            positioned(~1 ~ ~){power_off();cross_power_off_horizontal()}
+            positioned(~ ~ ~1){if (!block(#gates)){power_off();cross_power_off_vertical()}}
+        }
+        //Turn Up-Left
+        if (block(~ ~ ~ gray_terracotta)){
+            setblock(~ ~ ~ light_blue_terracotta)
+            positioned(~-1 ~ ~){power_off();cross_power_off_horizontal()}
+            positioned(~ ~ ~1){if (!block(#gates)){power_off();cross_power_off_vertical()}}
+        }
+        //Turn Right-Up
+        if (block(~ ~ ~ orange_wool)){
+            setblock(~ ~ ~ white_wool)
+            positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+            positioned(~-1 ~ ~){power_off();cross_power_off_horizontal()}
+        }
+        //Turn Right-Up
+        if (block(~ ~ ~ magenta_wool)){
+            setblock(~ ~ ~ black_terracotta)
+            positioned(~ ~ ~-1){power_off();cross_power_off_vertical()}
+            positioned(~1 ~ ~){power_off();cross_power_off_horizontal()}
+        }
+        //Spliter
+        if (block(~ ~ ~ light_gray_terracotta)){
+            setblock(~ ~ ~ yellow_terracotta)
+            positioned(~-1 ~ ~){power_off();cross_power_off_horizontal()}
+            positioned(~1 ~ ~){power_off();cross_power_off_horizontal()}
+            positioned(~ ~ ~1){if (!block(#gates)){power_off();cross_power_off_vertical()}}
+        }
+        // Not
+        if (block(~ ~ ~ brown_terracotta)){
+            positioned(~ ~ ~-1){power_on();cross_power_on_vertical()}
+        }
+        // Or
+        if (block(~ ~ ~ purple_terracotta)){
+            positioned(~ ~ ~-1){
+                if (block(~-1 ~ ~1 #off) && block(~1 ~ ~1 #off)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #on) || block(~1 ~ ~1 #on)){power_on();cross_power_on_vertical()}
+            }
+        }
+        // And
+        if (block(~ ~ ~ cyan_terracotta)){
+            positioned(~ ~ ~-1){
+                if (block(~-1 ~ ~1 #off) || block(~1 ~ ~1 #off)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #on) && block(~1 ~ ~1 #on)){power_on();cross_power_on_vertical()}
+            }
+        }
+        // XOR
+        if (block(~ ~ ~ blue_terracotta)){
+            positioned(~ ~ ~-1){
+                if (block(~-1 ~ ~1 #off) && block(~1 ~ ~1 #off)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #on) && block(~1 ~ ~1 #on)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #off) && block(~1 ~ ~1 #on)){power_on();cross_power_on_vertical()}
+                if (block(~-1 ~ ~1 #on) && block(~1 ~ ~1 #off)){power_on();cross_power_on_vertical()}
+            }
+        }
+        // D Latch
+        if (block(~ ~ ~ dead_tube_coral_block)){
+            positioned(~ ~ ~-1){
+                if (block(~-1 ~ ~1 #off) && block(~1 ~ ~1 #on)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #on) && block(~1 ~ ~1 #on)){power_on();cross_power_on_vertical()}
+            }
+        }
+        // D Latch
+        if (block(~ ~ ~ dead_brain_coral_block)){
+            positioned(~ ~ ~-1){
+                if (block(~1 ~ ~1 #off) && block(~-1 ~ ~1 #on)){power_off();cross_power_off_vertical()}
+                if (block(~1 ~ ~1 #on) && block(~-1 ~ ~1 #on)){power_on();cross_power_on_vertical()}
+            }
+        }
+        // Mux
+        if (block(~ ~ ~ pink_wool)){
+            positioned(~ ~ ~-1){
+                if (block(~-1 ~ ~1 #off) && block(~ ~ ~2 #off)){power_off();cross_power_off_vertical()}
+                if (block(~-1 ~ ~1 #on) && block(~ ~ ~2 #off)){power_on();cross_power_on_vertical()}
+                if (block(~1 ~ ~1 #off) && block(~ ~ ~2 #on)){power_off();cross_power_off_vertical()}
+                if (block(~1 ~ ~1 #on) && block(~ ~ ~2 #on)){power_on();cross_power_on_vertical()}
+            }
+        }
+        positioned(~1 ~ ~){
+            if (block(purple_wool)){
+                new flipflop_saver(1)
+            }
+        }
+        positioned(~-1 ~ ~){
+            if (block(red_wool)){
+                new flipflop_saver(-1)
+            }
+        }
+    }
+}

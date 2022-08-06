@@ -1,0 +1,182 @@
+package hub
+
+bool played := false
+
+int @test resetted(){
+    return 1-played
+}
+
+
+def screen(){
+    screen.summon(home, credit, setting, maps){
+        if (!played){
+            game.resetAllDoor()
+            with(@a,true){
+                /execute in minecraft:overworld run tp @s 3.68 64.00 19.01 176.68 2.93
+                tag(inGame)
+                music.next()
+                clear()
+            }
+            played = true
+        }
+        else if (@a[tag=inGame]){
+            /tp @s @p[tag=inGame]
+            tag(inGame)
+            music.next()
+            clear()
+        }
+        else{
+            dialog.printd(no_reset)
+            with(@a,true){
+                screen.addcontroll()
+            }
+        }
+    }
+    screen.setoncredit{
+        credit.benjamin874()
+        credit.theblueman003()
+    }
+    screen.settingboolean0(music.enabled)
+    screen.settingenum1(dialog.language,7)
+    screen.onupdatesetting0{
+        if (!music.enabled){
+            stopsound(@a,master)
+        }
+    }
+    screen.onupdatesetting1{
+        dialog.printd(language_set)
+    }
+}
+screen.settingenum1(dialog.language,7)
+blocktags air{
+    air,
+    light
+}
+events.oninventorychanged{
+    if (entity.adventure() && @s[tag=!scr.controll]){
+        forgenerate($i,0,6){
+            inventory.setslot(hotbar.$i, air)
+        }
+        forgenerate($i,0,26){
+            inventory.setinventoryslot($i, air)
+        }
+        inventory.setoffhand(air)
+    }
+    if (entity.adventure() && @s[tag=scr.controll]){
+        forgenerate($i,0,6){
+            inventory.setslot(hotbar.$i, air)
+        }
+        forgenerate($i,0,26){
+            inventory.setinventoryslot($i, air)
+        }
+    }
+}
+def ticking main(){
+    kill(@e[type=item])
+    with(@a,true){
+        effect.night_vision(999999,0,true)
+        effect.saturation(999999,0,true)
+        maps.initplayer{
+            /execute in minecraft:overworld run tp @s 3.81 64.00 50.28 -541.07 -5.84
+            screen.addcontroll()
+            gamemode(adventure)
+        }
+        if (@s[tag=!scr.controll]){
+            inventory.setslot(hotbar.8, carrot_on_a_stick{CustomModelData:1,display:{Name:'[{"text":"Help","italic":false,"color":"aqua"}]',Lore:['[{"text":"Click for Help","italic":false,"color":"yellow"}]']}})
+            inventory.setslot(hotbar.7, carrot_on_a_stick{CustomModelData:2,display:{Name:'[{"text":"Solution","italic":false,"color":"aqua"}]',Lore:['[{"text":"Click for Solution","italic":false,"color":"yellow"}]']}})
+            
+            int x = @s.z
+            int z = -x
+            int l = (z+22)/34
+            l++
+            if (l < 51){
+                actionbar.show(1,1,"Level: ",l,"/",50)
+            }
+            
+            if (inventory.isholdingitem(carrot_on_a_stick)){
+                input.onclick{
+                    int slot = @s.slot
+                    if (slot == 7){
+                        solution.showlink("timecode.csv", E2QnVC-I9JQ, "Click here for the Solution", l)
+                    }
+                    if (slot == 8 && !dialog.Enabled){
+                        raycast.shoot(20,0.5,!block(~ ~ ~ #air)){
+                            if (block(~ ~ ~ cyan_terracotta)){
+                                dialog.show(level_2_1,2,pass){
+                                    game.kernel_level_2.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ brown_terracotta)){
+                                dialog.show(level_3_1,2,pass){
+                                    game.kernel_level_3.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ purple_terracotta)){
+                                dialog.show(level_4_1,2,pass){
+                                    game.kernel_level_4.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ blue_terracotta)){
+                                dialog.show(level_6_1,2,pass){
+                                    game.kernel_level_6.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ #{dead_tube_coral_block,dead_brain_coral_block})){
+                                dialog.show(level_40_1,5,pass){
+                                    game.kernel_level_40.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ pink_wool)){
+                                dialog.show(level_8_1,3,pass){
+                                    game.kernel_level_8.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ #{red_wool,purple_wool})){
+                                dialog.show(level_10_1,6,pass){
+                                    game.kernel_level_10.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ #logic.clock)){
+                                dialog.show(clock_0,2,pass){
+                                    game.kernel_level_clock.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else if (block(~ ~ ~ #logic.constant)){
+                                dialog.show(constant,1,pass,pass)
+                            }
+                            else if (block(~ ~ ~ #logic.on)){
+                                dialog.show(cable,1,pass,pass)
+                            }
+                            else if (block(~ ~ ~ #logic.off)){
+                                dialog.show(cable,1,pass,pass)
+                            }
+                            else if (block(~ ~ ~ #logic.cable)){
+                                dialog.show(cable,1,pass,pass)
+                            }
+                            else if (block(~ ~ ~ stone_button)){
+                                dialog.show(button,1,pass,pass)
+                            }
+                            else if (block(~ ~ ~ redstone_lamp)){
+                                dialog.show(level_1_1,1,pass){
+                                    game.kernel_level_1.kernel.setanimations(animationset.idle())
+                                }
+                            }
+                            else{
+                                dialog.show(nothing,1,pass,pass)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    input.onblackstonebutton(11,65,25){
+        tellraw(@p, ("Click Here To Download the Resources Pack.", link="https://www.mediafire.com/file/dc1vsvq9qs3qygu/Computery_Stuff_rp.zip/file"))
+    }
+    screen.screen_tick()
+}
+
+screen.setoncredit{
+    credit.benjamin874()
+    credit.theblueman003()
+}

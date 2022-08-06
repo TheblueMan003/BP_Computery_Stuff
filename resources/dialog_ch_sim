@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("欢迎来到太阳能科技公司!",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("上周我们被黑客袭击了.",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("所以我们决定改进我们的安全系统.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("为此, 我们想使用我们的一项新技术, 我们称之为蓝石.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("我们需要你帮助我们测试它的能力.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("蓝石会像红石一样工作, 但距离有限.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("你的目标是点亮蓝石灯.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("这是一个与门元件.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("当它的左侧和右侧输入为 \"开\" 信号时输出 \"开\" 信号.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("这是一个非门元件.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("它反转它接收到的信号.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("这是一个或门元件.",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("当它的左侧或右侧输入为 \"开\" 信号时输出 \"开\" 信号.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("这是一个异或门元件.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("它仅接收到一个 \"开\" 信号时输出 \"开\" 信号.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("这是一个数据选择器。",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("如果底部输入为 \"闭\" 信号时, 它将复制并输出它 \"左侧的\" 信号.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("如果底部输入为 \"开\" 信号时, 它将复制并输出它 \"右侧的\" 信号.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("这是一个 D 触发器.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("这是最复杂的门之一, 所以请认真听.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("看到上面的小箭头了吗?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("当带箭头的一侧从 \"闭\" 信号变为 \"开\" 信号时,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("它将复制并输出另一侧的信号.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("直到有箭头的一侧从 \"闭\" 信号变为 \"开\" 信号, 输出才会改变.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("这是一个 D 锁存器.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("你看到上面的字母 E 了吗?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("当带 E 的一侧输入为 \"开\" 信号时,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("它将复制并输出另一侧的信号.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("如果带 E 的一侧输入为 \"闭\" 信号, 那么输出将保持不变.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("恭喜，你完成了所有的测试!",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("再见!",light_purple))
+
+cable;null;(());((""),("这是一根电缆.",light_purple))
+button;null;(());((""),("这是一个按钮, 你可以按下它.",light_purple))
+constant;null;(());((""),("这是一个常数. 它的输出不会改变.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("这是一个时钟.",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("它的输出每秒都在变化.",light_purple))
+nothing;null;(());((""),("查看 蓝石 组件以获取更多信息.",light_purple))
+
+language_set;null;(());((""),("语言切换至中文(简体).",white))
+no_reset;null;(());((""),("本地图没有重置系统. 如果您想再次游玩, 请重新安装本地图.",red))

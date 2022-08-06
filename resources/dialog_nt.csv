@@ -1,0 +1,51 @@
+name;call;npc;value
+intro_0;null;(((game.kernel_level_1.kernel, hello)));((""),("Welkom bij Solar Tech Corp!",light_purple))
+intro_1;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Vorige week werden we aangevallen door geesten.",light_purple))
+intro_2;null;(((game.kernel_level_1.kernel, talking)));((""),("Daarom hebben we besloten om ons beveiligingssysteem te verbeteren.",light_purple))
+intro_3;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Hiervoor willen we een nieuwe technologie van ons gebruiken, genaamd Bluestone.",light_purple))
+intro_4;null;(((game.kernel_level_1.kernel, requirement)));((""),("We hebben jouw hulp nodig om de capaciteit daarvan te testen.",light_purple))
+
+level_1_0;null;(((game.kernel_level_1.kernel, long_talking)));((""),("Bluestone werkt net als Redstone, maar het signaal kan verder dan 16 blokken reiken.",light_purple))
+level_1_1;null;(((game.kernel_level_1.kernel, talking)));((""),("Jouw doel is om de Bluestone lamp te verlichten.",light_purple))
+
+level_2_1;null;(((game.kernel_level_2.kernel, this)));((""),("Dit is een EN-Poort.",light_purple))
+level_2_2;null;(((game.kernel_level_2.kernel, talking)));((""),("De uitkomst is AAN als zowel de linker EN de rechter zijde een AAN is.",light_purple))
+
+level_3_1;null;(((game.kernel_level_3.kernel, this)));((""),("Dit is een NIET-Poort.",light_purple))
+level_3_2;null;(((game.kernel_level_3.kernel, talking)));((""),("De uitkomst is het omgkeerde signaal (AAN/UIT) door van wat het binnenkrijgt.",light_purple))
+
+level_4_1;null;(((game.kernel_level_4.kernel, this)));((""),("Dit is een OF-Poort.",light_purple))
+level_4_2;null;(((game.kernel_level_4.kernel, talking)));((""),("De uitkomst is AAN als de linker OF de rechter zijde een AAN is.",light_purple))
+
+level_6_1;null;(((game.kernel_level_6.kernel, this)));((""),("Dit is een XOR-Poort.",light_purple))
+level_6_2;null;(((game.kernel_level_6.kernel, talking)));((""),("De uitkomst is AAN als er exact 1 AAN binnenkomt.",light_purple))
+
+level_8_1;null;(((game.kernel_level_8.kernel, this)));((""),("Dit is een Multiplexer.",light_purple))
+level_8_2;null;(((game.kernel_level_8.kernel, long_talking)));((""),("Als de onderkant UIT is, dan laat hij het signaal van LINKS door.",light_purple))
+level_8_3;null;(((game.kernel_level_8.kernel, talking)));((""),("Als de onderkant AAN is, dan laat hij het singaal van RECHTS door.",light_purple))
+
+level_10_1;null;(((game.kernel_level_10.kernel, this)));((""),("Dit is een D-Flip-Flop.",light_purple))
+level_10_2;null;(((game.kernel_level_10.kernel, insist)));((""),("Het is een van de meest ingewikkelde poorten, dust luister goed.",light_purple))
+level_10_3;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Zie je het kleine pijltje erop?",light_purple))
+level_10_4;null;(((game.kernel_level_10.kernel, talking)));((""),("Wanneer de zijde met het pijltje van UIT naar AAN verandert,",light_purple))
+level_10_5;null;(((game.kernel_level_10.kernel, long_talking)));((""),("Dan geeft het het signaal van de andere zijde door.",light_purple))
+level_10_6;null;(((game.kernel_level_10.kernel, talking)));((""),("De uitkomst verandert pas weer als de zijde met het pijltje van UIT naar AAN verandert.",light_purple))
+
+level_40_1;null;(((game.kernel_level_40.kernel, this)));((""),("Dit is een D-Latch.",light_purple))
+level_40_2;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Zie je de kleine E erop?",light_purple))
+level_40_3;null;(((game.kernel_level_40.kernel, talking)));((""),("Wanneer de zijde van de E AAN is,",light_purple))
+level_40_4;null;(((game.kernel_level_40.kernel, long_talking)));((""),("Dan laat het het signaal van de andere zijde door.",light_purple))
+level_40_5;null;(((game.kernel_level_40.kernel, talking)));((""),("De uitkomst verandert niet als de E zijde UIT is.",light_purple))
+
+level_50_1;null;(((game.kernel_level_50.kernel, clap)));((""),("Gefeliciteerd, je hebt alle testen voltooid!",light_purple))
+level_50_2;null;(((game.kernel_level_50.kernel, hello)));((""),("Tot ziens!",light_purple))
+
+cable;null;(());((""),("Dit is een Kabel.",light_purple))
+button;null;(());((""),("Dit is een Knop. Je kan dit indrukken.",light_purple))
+constant;null;(());((""),("Dit is een Constante. De uitkomst kan niet veranderen.",light_purple))
+clock_0;null;(((game.kernel_level_clock.kernel, this)));((""),("Dit is een klok.",light_purple))
+clock_1;null;(((game.kernel_level_clock.kernel, long_talking)));((""),("De uitkomst verandert elke seconde.",light_purple))
+nothing;null;(());((""),("Kijk naar een Bluestone component voor meer informatie.",light_purple))
+
+language_set;null;(());((""),("Taal gezet naar Nederlands.",white))
+no_reset;null;(());((""),("Deze map heeft geen reset systeem. Als je nog een keer wil spelen, installeer de map dan opnieuw.",red))
